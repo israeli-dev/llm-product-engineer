@@ -1,10 +1,15 @@
+
+
 def calculate_bmi(weight, height):
+  
     if weight <= 0:
-        return "Weight must be greater than zero"
-
-    if height <= 0:
-        return "Height must be greater than zero"
-
+        raise ValueError("Weight can't be negavtive")
+        
+    elif height <= 0:
+        raise ValueError("Height can't be negavtive")
+    
+            
+    
     bmi = round(weight / (height * height), 2)
 
     if bmi < 18.5:
